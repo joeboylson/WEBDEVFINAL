@@ -4,42 +4,57 @@ FONTS
 font-family: 'Rubik', sans-serif;
 font-family: 'Playfair Display', serif;
 font-family: 'Montserrat', sans-serif;
+
+#cc3333
+#f89938
+#ffc70f
+
 */
 
 /* * */
 
-html, body {
-  margin: 0;
-  padding: 0
+:root {
+  --darkgray: #2c2c2c;
+  --red: #cc3333;
+  --orange: #f89938;
+  --yellow: #ffc70f;
+  --transwhite: rgba(255, 255, 255, 0.6);
 }
 
-#nav a {
+html,
+body,
+h1,
+#aboutvision p
+{
+  margin: 0;
+  padding: 0;
+  min-width: 100%;
+}
+
+nav a {
   transition-duration: 0.25s
 }
 
-
 /* NAV */
 
-#nav {
+nav {
+  display: flex;
   text-align: center;
 }
 
-#nav a {
+nav a {
   font-family: 'Montserrat', sans-serif;
   text-decoration: none;
   line-height: 100px;
   width: calc(100% / 3);
   display: block;
-  float: left;
-
   color: white;
-  background-color: black;
+  background-color: var(--darkgray);
 }
 
-#nav a:hover {
-
+nav a:hover {
   color: black;
-  background-color: white;
+  background-color: var(--yellow);
 }
 
 /* FOOTER */
@@ -47,14 +62,157 @@ html, body {
 footer {
   width: 100%;
   height: 200px;
-
   color: white;
-  background-color: black;
+  background-color: var(--yellow)
 }
 
 /* HOME */
 
 #landingpage {
-  height: 100vh;
+  padding-top: 137px;
+  padding-bottom: 137px;
+  width: 100%;
+  background-image: url(../images/laurent-perren-477138-unsplash.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
+#landingpage-greeting {
+  padding: 100px;
+  text-align: center;
+  margin: auto;
+  width: 1000px;
+  background-color: white;
+  background: var(--transwhite);
+  color: #2c2c2c;
+}
+
+#landingpage-greeting h1 {
+  width: 100%;
+  line-height: 50px;
+  font-family: industry, sans-serif;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 13em;
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+
+#landingpage-greeting h2 {
+  line-height: 50px;
+  font-family: industry, sans-serif;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 6.8em;
+}
+
+/* MENU */
+
+#menutitle {
+  line-height: 100px;
+  text-align: center;
+  font-family: industry, sans-serif;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 4em;
+  width: 100%;
+  color: var(--yellow);
+  background-color: var(--red);
+}
+
+#menugrid {
+  padding: 5px;
+  display: flex;
+  flex-wrap: wrap;
+  background-image: url(../images/dan-cook-501784-unsplash.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.menuitem {
+  margin: 5px;
+  flex: 1 0 49%;
+}
+
+.menuitemcontent {
+  background-color: var(--transwhite);
+  height: 362px;
+}
+
+.menuitemcontent h2 {
+  text-align: center;
+  margin: 0;
+  line-height: 362px;
+  font-family: industry, sans-serif;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 6.8em;
+  color: var(--darkgray);
+}
+
+/* ABOUT */
+
+#aboutwrapper {
+  background-image: url(../images/benjamin-zanatta-545376-unsplash.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.abouttitle {
+  display: block;
+  margin: auto;
+  width: 80%;
+  line-height: 200px;
+  text-align: center;
+  background-color: var(--transwhite);
+}
+
+.abouttitle h1 {
+  font-family: industry, sans-serif;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 6em;
+  color: var(--yellow);
+}
+
+.profilewrapper {
+  background-color: var(--transwhite);
+  width: 80%;
+  margin: auto;
+}
+
+.profilephoto {
+  width: 15%;
+  border-radius: 300px;
+  margin: 5%;
+  border: 5px var(--red) solid;
+}
+
+.profilecontent {
+  float: right;
+  width: 64%;
+  margin: 0 5% 0 5%;
+  font-family: 'Playfair Display', serif;
+  font-size: 2em;
+  color: var(--red);
+}
+
+#aboutvision {
+  width: 70%;
+  padding: 0 5% 5% 5%;
+  font-family: 'Playfair Display', serif;
+  font-size: 2em;
+  color: var(--red);
+  margin: auto;
+  background-color: var(--transwhite);
+}
+
+#demosection {
+  width: 70%;
+  padding: 0 5% 5% 5%;
+  font-family: 'Playfair Display', serif;
+  font-size: 2em;
+  color: var(--red);
+  margin: auto;
+  background-color: var(--transwhite);
+}
