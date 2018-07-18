@@ -19,23 +19,23 @@ font-family: 'Montserrat', sans-serif;
   --orange: #f89938;
   --yellow: #ffc70f;
   --transwhite: rgba(255, 255, 255, 0.6);
+  --transition_duration: 0.25s
 }
 
 html,
 body,
 h1,
-#aboutvision p
-{
+#aboutvision p {
   margin: 0;
   padding: 0;
   min-width: 100%;
 }
 
-nav a {
-  transition-duration: 0.25s
-}
-
 /* NAV */
+
+nav a {
+  transition-duration: var(--transition_duration)
+}
 
 nav {
   display: flex;
@@ -60,6 +60,7 @@ nav a:hover {
 /* FOOTER */
 
 footer {
+  display: block;
   width: 100%;
   height: 200px;
   color: white;
@@ -81,19 +82,18 @@ footer {
   padding: 100px;
   text-align: center;
   margin: auto;
-  width: 1000px;
-  background-color: white;
-  background: var(--transwhite);
+  width: 90%;
+  background-color: var(--transwhite);
   color: #2c2c2c;
 }
 
 #landingpage-greeting h1 {
-  width: 100%;
+  width: 90%;
   line-height: 50px;
   font-family: industry, sans-serif;
   font-style: normal;
   font-weight: 900;
-  font-size: 13em;
+  font-size: 11em;
   margin-top: 100px;
   margin-bottom: 100px;
 }
@@ -103,7 +103,7 @@ footer {
   font-family: industry, sans-serif;
   font-style: normal;
   font-weight: 900;
-  font-size: 6.8em;
+  font-size: 5.8em;
 }
 
 /* MENU */
@@ -114,7 +114,7 @@ footer {
   font-family: industry, sans-serif;
   font-style: normal;
   font-weight: 900;
-  font-size: 4em;
+  font-size: 3em;
   width: 100%;
   color: var(--yellow);
   background-color: var(--red);
@@ -134,8 +134,18 @@ footer {
   flex: 1 0 49%;
 }
 
+.menuitem a {
+  text-decoration: none;
+}
+
 .menuitemcontent {
   background-color: var(--transwhite);
+  height: 362px;
+  transition-duration: var(--transition_duration);
+}
+
+.menuitemcontent:hover {
+  background-color: white;
   height: 362px;
 }
 
@@ -150,6 +160,67 @@ footer {
   color: var(--darkgray);
 }
 
+/* SUB MENU */
+
+#navseperator {
+  height: 50px;
+  width: 100%;
+  background-color: var(--red);
+}
+
+#menunav a {
+  transition-duration: var(--transition_duration)
+}
+
+#menunav {
+  display: flex;
+  text-align: center;
+}
+
+#menunav a {
+  font-family: 'Montserrat', sans-serif;
+  text-decoration: none;
+  line-height: 100px;
+  width: calc(100% / 4);
+  display: block;
+  color: white;
+  background-color: var(--yellow);
+}
+
+#menunav a:hover {
+  color: black;
+  background-color: var(--yellow);
+}
+
+#foodwrapper {
+  padding-top: 50px;
+  width: 80%;
+  height: 1300px;
+  margin: auto;
+}
+
+.fooditem {
+  padding-bottom: 50px;
+  width: 50%;
+  float: left;
+}
+
+.fooditem img {
+  width: 80%;
+  display: block;
+  margin: auto;
+}
+
+.fooditemtext {
+  font-family: 'Montserrat', sans-serif;
+  width: 80%;
+  margin: auto;
+}
+
+.fooditemtext p {
+  font-family: 'Rubik', sans-serif;
+}
+
 /* ABOUT */
 
 #aboutwrapper {
@@ -159,6 +230,7 @@ footer {
 }
 
 .abouttitle {
+  height: 200px;
   display: block;
   margin: auto;
   width: 80%;
@@ -168,30 +240,39 @@ footer {
 }
 
 .abouttitle h1 {
+
   font-family: industry, sans-serif;
   font-style: normal;
   font-weight: 900;
-  font-size: 6em;
+  font-size: 5em;
   color: var(--yellow);
 }
 
-.profilewrapper {
-  background-color: var(--transwhite);
+#profiles {
+  margin: auto auto 50px auto;
   width: 80%;
-  margin: auto;
+  height: 1500px;
+  background-color: var(--transwhite)
+
 }
 
 .profilephoto {
   width: 15%;
   border-radius: 300px;
-  margin: 5%;
   border: 5px var(--red) solid;
+  display: block;
+  margin: auto;
+
+}
+
+.profilephotowrapper {
+  float: left;
+  width: 100%;
+  padding: 20px 0 20px 0;
 }
 
 .profilecontent {
-  float: right;
-  width: 64%;
-  margin: 0 5% 0 5%;
+  margin: 5%;
   font-family: 'Playfair Display', serif;
   font-size: 2em;
   color: var(--red);
@@ -215,4 +296,51 @@ footer {
   color: var(--red);
   margin: auto;
   background-color: var(--transwhite);
+}
+
+@media only screen and (max-width: 1000px) {
+
+  nav {
+    display: block;
+    text-align: center;
+  }
+
+  nav a {
+    width: 100%;
+  }
+
+  #landingpage-greeting {
+    padding: 0;
+    height: 300px;
+    width: 100%;
+    background-color: var(--transwhite);
+    color: #2c2c2c;
+  }
+
+  #landingpage-greeting h1 {
+    padding: 0;
+    margin: 0;
+    line-height: 200px;
+    font-size: 6em;
+  }
+  
+  #landingpage-greeting h2 {
+    padding: 0;
+    margin: 0;
+    line-height: 0;
+    font-size: 3.2em;
+  }
+
+  #menutitle { font-size: 1.5em; }
+  .menuitemcontent h2 { font-size: 3em; }
+  .fooditem { width: 100%; }
+  #foodwrapper { height: 2300px; }
+  #menunav { display: block; }
+  #menunav a { width: 100%; }
+  .abouttitle h1 { font-size: 3em; }
+  .profilephoto { width: 50%; }
+  #profiles { height: 2400px; }
+
+  
+
 }
